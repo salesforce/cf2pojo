@@ -51,8 +51,11 @@ We love contributions, but it's important that your pull request adhere to the s
 
 - All tests must be passing
 - All code changes require tests
-- All code changes must be consistent with our Checkstyle rules
-- Great inline comments
+- All code changes must be consistent with our Checkstyle rules.  We use the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) with a few small alterations:
+    - Indent size of 4
+    - Column limit of 120
+    - Import statements from standard Java packages (e.g. `import java.util.Map;`) belong in their own section after import statements from third-party libraries
+- Code should have great inline comments
 
 # Future
 For now, cf2pojo is only available as a Gradle plugin.  In the future it may be extended or modified to support Maven-based projects and/or Java projects without a build tool.

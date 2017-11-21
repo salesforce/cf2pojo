@@ -9,6 +9,7 @@ plugins {
     id 'java-gradle-plugin'
     id 'maven'
     id 'findbugs'
+    id 'checkstyle'
 }
 
 group 'com.salesforce.cf2pojo'
@@ -21,4 +22,17 @@ repositories {
 dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.3.2'
     compile group: 'com.github.javaparser', name: 'javaparser-core', version: '3.3.4'
+}
+
+configurations {
+    checkstyleOverride
+}
+
+dependencies {
+    checkstyleOverride('com.puppycrawl.tools:checkstyle:8.4')
+}
+
+tasks.withType(Checkstyle) {
+    checkstyleClasspath = project.configurations.checkstyleOverride
+    ignoreFailures = false
 }

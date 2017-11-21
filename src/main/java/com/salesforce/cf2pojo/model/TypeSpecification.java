@@ -11,5 +11,6 @@ import java.util.Map;
 
 public interface TypeSpecification {
     String getDocumentation();
+
     Map<String, PropertySpecification> getProperties();
 }
