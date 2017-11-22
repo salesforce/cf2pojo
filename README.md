@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/salesforce/cf2pojo.svg?branch=master)](https://travis-ci.org/salesforce/cf2pojo)
+
 # cf2pojo
 **cf2pojo** is a Gradle plugin that automatically generates classes for creating and manipulating CloudFormation templates in Java.  You can use these generated classes in conjunction with [Jackson](https://github.com/FasterXML/jackson) to serialize and deserialize entire CloudFormation templates, or parts thereof, in JSON format.
 
